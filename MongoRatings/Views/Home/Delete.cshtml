@@ -1,0 +1,38 @@
+﻿@model Rating
+
+<h2 class="text-white">Delete Rating</h2>
+
+<h4 class="text-white">Are you sure you want to delete the following rating?</h4>
+
+<table class="table text-white">
+    <tr>
+        <th>@Html.DisplayNameFor(m => m.Id)</th>
+        <th>@Html.DisplayNameFor(m => m.Created_At)</th>
+        <th>@Html.DisplayNameFor(m => m.Show_Name)</th>
+        <th>@Html.DisplayNameFor(m => m.Season_Number)</th>
+        <th>@Html.DisplayNameFor(m => m.Episode_Number)</th>
+        <th>@Html.DisplayNameFor(m => m.Episode_Name)</th>
+        <th>@Html.DisplayNameFor(m => m.Humor_Rating)</th>
+        <th>@Html.DisplayNameFor(m => m.Story_Rating)</th>
+        <th>@Html.DisplayNameFor(m => m.Best_Character)</th>
+        <th>@Html.DisplayNameFor(m => m.Overall_Rating)</th>
+    </tr>
+    <tr>
+        <td>@Html.DisplayFor(m => m.Id)</td>
+        <td>@Html.DisplayFor(m => m.Created_At)</td>
+        <td>@Html.DisplayFor(m => m.Show_Name)</td>
+        <td>@Html.DisplayFor(m => m.Season_Number)</td>
+        <td>@Html.DisplayFor(m => m.Episode_Number)</td>
+        <td>@Html.DisplayFor(m => m.Episode_Name)</td>
+        <td>@Html.DisplayFor(m => m.Humor_Rating)</td>
+        <td>@Html.DisplayFor(m => m.Story_Rating)</td>
+        <td>@Html.DisplayFor(m => m.Best_Character)</td>
+        <td>@Html.DisplayFor(m => m.Overall_Rating)</td>
+    </tr>
+</table>
+
+@using (Html.BeginForm("Delete"))
+{
+     <button type="submit" class="btn btn-danger">Delete Rating</button>
+     @Html.ActionLink("Back to Ratings", "Ratings", "Home", null, new { @class = "btn btn-default" })
+}

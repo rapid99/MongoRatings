@@ -1,0 +1,11 @@
+C:\Users\matth\source\repos\MongoRatings\MongoRatings\bin\Debug\netcoreapp2.0\MongoRatings.deps.json
+C:\Users\matth\source\repos\MongoRatings\MongoRatings\bin\Debug\netcoreapp2.0\MongoRatings.runtimeconfig.json
+C:\Users\matth\source\repos\MongoRatings\MongoRatings\bin\Debug\netcoreapp2.0\MongoRatings.runtimeconfig.dev.json
+C:\Users\matth\source\repos\MongoRatings\MongoRatings\bin\Debug\netcoreapp2.0\MongoRatings.dll
+C:\Users\matth\source\repos\MongoRatings\MongoRatings\obj\Debug\netcoreapp2.0\MongoRatings.csprojResolveAssemblyReference.cache
+C:\Users\matth\source\repos\MongoRatings\MongoRatings\obj\Debug\netcoreapp2.0\MongoRatings.csproj.CoreCompileInputs.cache
+C:\Users\matth\source\repos\MongoRatings\MongoRatings\obj\Debug\netcoreapp2.0\MongoRatings.AssemblyInfoInputs.cache
+C:\Users\matth\source\repos\MongoRatings\MongoRatings\obj\Debug\netcoreapp2.0\MongoRatings.AssemblyInfo.cs
+C:\Users\matth\source\repos\MongoRatings\MongoRatings\bin\Debug\netcoreapp2.0\MongoRatings.pdb
+C:\Users\matth\source\repos\MongoRatings\MongoRatings\obj\Debug\netcoreapp2.0\MongoRatings.dll
+C:\Users\matth\source\repos\MongoRatings\MongoRatings\obj\Debug\netcoreapp2.0\MongoRatings.pdb

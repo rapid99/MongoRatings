@@ -1,0 +1,25 @@
+﻿@model Rating
+
+<h2 class="text-white">Edit Rating</h2>
+
+@using (Html.BeginForm("Edit"))
+{
+    @Html.LabelFor(m => m.Show_Name, new { @class = "text-white" }) @Html.TextBoxFor(m => m.Show_Name, new { @style = "margin-left: 46px;" })<br />
+    @Html.LabelFor(m => m.Season_Number, new { @class = "text-white" }) @Html.TextBoxFor(m => m.Season_Number, new { @style = "margin-left: 18px;" })<br />
+    @Html.LabelFor(m => m.Episode_Number, new { @class = "text-white" }) @Html.TextBoxFor(m => m.Episode_Number, new { @style = "margin-left: 15px;" })<br />
+    @Html.LabelFor(m => m.Episode_Name, new { @class = "text-white" }) @Html.TextBoxFor(m => m.Episode_Name, new { @style = "margin-left: 29px;" })<br />
+    @Html.LabelFor(m => m.Humor_Rating, new { @class = "text-white" }) @Html.TextBoxFor(m => m.Humor_Rating, new { @id = "humor", @style = "margin-left: 33px;" })<br />
+    @Html.LabelFor(m => m.Story_Rating, new { @class = "text-white" }) @Html.TextBoxFor(m => m.Story_Rating, new { @id = "story", @style = "margin-left: 45px;" })<br />
+    @Html.LabelFor(m => m.Best_Character, new { @class = "text-white" }) @Html.TextBoxFor(m => m.Best_Character, new { @id = "story", @style = "margin-left: 45px;" })<br />
+    @Html.LabelFor(m => m.Overall_Rating, new { @class = "text-white" }) @Html.TextBoxFor(m => m.Overall_Rating, new { @id = "overall", @style = "margin-left: 33px;", @class = "disabled", @tabindex = "-1", @placeholder = "Don't edit directly" })<br /><br /><br />
+    <button type="submit" value="Submit" class="btn btn-amber">Submit</button>
+    @Html.ActionLink("Back to Ratings", "Ratings", "Home", null, new { @class = "btn btn-default" })
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#humor, #story").on("change", function () {
+            $("#overall").val(parseInt($("#humor").val()) + parseInt($("#story").val()));
+        });
+    });
+</script>

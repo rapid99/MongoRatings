@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Rating>
+
+<form class="form-inline" method="get" style="margin-left: 10px; margin-top: 5px;">
+    <h2 class="text-white" style="margin-right: 30px;">Ratings</h2>
+    <div class="md-form mt-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="searchQuery" />
+    </div>
+</form><br />
+@if (!Model.Any())
+{
+    <p class="white-text">No ratings found!</p>
+}
+else
+{
+    <table class="table white-text table-hover table-responsive-md table-fixed">
+        <thead class="cyan lighten-2">
+            <tr style="text-align: center;">
+                <th>@Html.DisplayNameFor(m => m.Show_Name)</th>
+                <th>@Html.DisplayNameFor(m => m.Season_Number)</th>
+                <th>@Html.DisplayNameFor(m => m.Episode_Number)</th>
+                <th>@Html.DisplayNameFor(m => m.Episode_Name)</th>
+                <th>@Html.DisplayNameFor(m => m.Humor_Rating)</th>
+                <th>@Html.DisplayNameFor(m => m.Story_Rating)</th>
+                <th>@Html.DisplayNameFor(m => m.Best_Character)</th>
+                <th>@Html.DisplayNameFor(m => m.Overall_Rating)</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var rating in Model)
+            {
+                <tr style="text-align: center;">
+                    <td>@Html.DisplayFor(m => rating.Show_Name)</td>
+                    <td>@Html.DisplayFor(m => rating.Season_Number)</td>
+                    <td>@Html.DisplayFor(m => rating.Episode_Number)</td>
+                    <td>@Html.DisplayFor(m => rating.Episode_Name)</td>
+                    <td>@Html.DisplayFor(m => rating.Humor_Rating)</td>
+                    <td>@Html.DisplayFor(m => rating.Story_Rating)</td>
+                    <td>@Html.DisplayFor(m => rating.Best_Character)</td>
+                    <td>@Html.DisplayFor(m => rating.Overall_Rating)</td>
+                    <td>@Html.ActionLink("Edit", "Edit", "Home", new { id = rating.Id }, new { @class = "text-white" }) <i class="fa fa-ellipsis-v text-white" style="margin-left:20px;margin-right:-30px;" aria-hidden="true"></i></td>
+                    <td>@Html.ActionLink("Delete", "Delete", "Home", new { id = rating.Id }, new { @style = "color: red;" })</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

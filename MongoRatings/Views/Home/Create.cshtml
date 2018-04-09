@@ -1,0 +1,28 @@
+﻿@model Rating
+
+
+@using (Html.BeginForm("Create", "Home"))
+{
+<div style="margin-left: 20px;">
+    <h1 class="white-text">Create a New Rating</h1><br />
+    @Html.LabelFor(m => m.Show_Name, new { @class = "text-white" }) @Html.TextBoxFor(m => m.Show_Name, new { @style = "margin-left: 46px;" })<br />
+    @Html.LabelFor(m => m.Season_Number, new { @class = "text-white" }) @Html.TextBoxFor(m => m.Season_Number, new { @style = "margin-left: 18px;" })<br />
+    @Html.LabelFor(m => m.Episode_Number, new { @class = "text-white" }) @Html.TextBoxFor(m => m.Episode_Number, new { @style = "margin-left: 15px;" })<br />
+    @Html.LabelFor(m => m.Episode_Name, new { @class = "text-white" }) @Html.TextBoxFor(m => m.Episode_Name, new { @style = "margin-left: 29px;" })<br />
+    @Html.LabelFor(m => m.Humor_Rating, new { @class = "text-white" }) @Html.TextBoxFor(m => m.Humor_Rating, new { @id = "humor", @style = "margin-left: 33px;" })<br />
+    @Html.LabelFor(m => m.Story_Rating, new { @class = "text-white" }) @Html.TextBoxFor(m => m.Story_Rating, new { @id = "story", @style = "margin-left: 45px;" })<br />
+    @Html.LabelFor(m => m.Best_Character, new { @class = "text-white" }) @Html.TextBoxFor(m => m.Best_Character, new { @id = "story", @style = "margin-left: 27px;" })<br />
+    @Html.LabelFor(m => m.Overall_Rating, new { @class = "text-white" }) @Html.TextBoxFor(m => m.Overall_Rating, new { @id = "overall", @style = "margin-left: 33px;", @class = "disabled", @tabindex = "-1", @placeholder = "Don't edit directly" })<br /><br /><br />
+    <button type="submit" id="submitBtn" class="btn btn-amber">Submit <i class="fa fa-send-o" aria-hidden="true"></i></button>
+    @Html.ActionLink("Cancel", "Ratings", "Home", null, new { @class = "btn btn-default" })
+</div>
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#humor, #story").val(0);
+        $("#humor, #story").on("change", function () {
+            $("#overall").val(parseInt($("#humor").val()) + parseInt($("#story").val()));
+        });
+    });
+</script>
